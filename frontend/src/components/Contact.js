@@ -21,7 +21,7 @@ function Contact() {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://portfolio-website-t74t.onrender.com", {
+      const response = await fetch("https://my-portfolio-website-pa2y.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
