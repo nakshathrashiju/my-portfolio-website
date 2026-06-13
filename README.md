@@ -132,7 +132,6 @@ npm start
 
 The application will launch automatically at `http://localhost:3000`.
 
----
 
  Cloud Deployment Architecture
 
@@ -153,7 +152,6 @@ The application will launch automatically at `http://localhost:3000`.
 
 * `REACT_APP_BACKEND_URL` = `https://my-portfolio-website-pa2y.onrender.com`
 
----
 
  Navigation Sections
 
@@ -163,7 +161,6 @@ The application will launch automatically at `http://localhost:3000`.
 * **Projects:** Complete catalog showcasing 8 core projects featuring dynamic content tags and deep-linking to repositories.
 * **Contact:** Interactive client form backed by real-time database validation and persistence layers.
 
----
 
 📬 Contact & Links
 
