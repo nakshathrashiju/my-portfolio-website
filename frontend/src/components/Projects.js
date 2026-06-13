@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { motion } from 'framer-motion';
 import { FiGithub, FiShare2, FiX } from 'react-icons/fi';
 
@@ -53,22 +54,9 @@ const projects = [
   }
 ];
 
-function Projects() {
-  const [shareProject, setShareProject] = React.useState(null);
-  const [copied, setCopied] = React.useState(false);
-
-  const handleShare = (project) => {
-    setShareProject(project);
-    setCopied(false);
-  };
-
-  const closeShare = () => {
-    setShareProject(null);
-  };
-
+function ShareModal({ project, onClose }) {
   const getShareData = (project) => {
     const text = `🚀 ${project.title}\n\n${project.description}\n\nTech Stack: ${project.tags.join(', ')}`;
-
     return {
       text,
       whatsapp: `https://wa.me/?text=${encodeURIComponent(text)}`,
@@ -76,6 +64,59 @@ function Projects() {
       linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`
     };
   };
+
+  const [copied, setCopied] = React.useState(false);
+  const shareData = getShareData(project);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(shareData.text);
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+      onClose();
+    }, 1200);
+  };
+
+  return ReactDOM.createPortal(
+    <div className="share-overlay" onClick={onClose}>
+      <div className="share-modal" onClick={(e) => e.stopPropagation()}>
+
+        <div className="share-header">
+          <h3>Share Project</h3>
+          <FiX onClick={onClose} style={{ cursor: 'pointer' }} />
+        </div>
+
+        <p className="share-title">{project.title}</p>
+
+        <div className="share-options">
+          <a href={shareData.whatsapp} target="_blank" rel="noopener noreferrer">
+            🟢 WhatsApp
+          </a>
+          <a href={shareData.email}>
+            📧 Email
+          </a>
+          <a href={shareData.linkedin} target="_blank" rel="noopener noreferrer">
+            🔵 LinkedIn
+          </a>
+          <button onClick={handleCopy}>
+            🔗 Copy Link
+          </button>
+        </div>
+
+        {copied && (
+          <div className="copy-toast">
+            Copied to clipboard ✔
+          </div>
+        )}
+
+      </div>
+    </div>,
+    document.body
+  );
+}
+
+function Projects() {
+  const [shareProject, setShareProject] = React.useState(null);
 
   return (
     <motion.div
@@ -103,8 +144,7 @@ function Projects() {
                     <FiGithub />
                   </a>
                 )}
-
-                <span onClick={() => handleShare(project)} style={{ cursor: 'pointer' }}>
+                <span onClick={() => setShareProject(project)} style={{ cursor: 'pointer' }}>
                   <FiShare2 />
                 </span>
               </div>
@@ -121,59 +161,14 @@ function Projects() {
         ))}
       </div>
 
-      {/* SHARE MODAL */}
+      {/* Modal rendered via Portal — directly into document.body */}
       {shareProject && (
-        <div className="share-overlay" onClick={closeShare}>
-          <div className="share-modal" onClick={(e) => e.stopPropagation()}>
-
-            <div className="share-header">
-              <h3>Share Project</h3>
-              <FiX onClick={closeShare} style={{ cursor: 'pointer' }} />
-            </div>
-
-            <p className="share-title">{shareProject.title}</p>
-
-            {/* SHARE OPTIONS */}
-            <div className="share-options">
-
-              <a href={getShareData(shareProject).whatsapp} target="_blank" rel="noopener noreferrer">
-                🟢 WhatsApp
-              </a>
-
-              <a href={getShareData(shareProject).email}>
-                📧 Email
-              </a>
-
-              <a href={getShareData(shareProject).linkedin} target="_blank" rel="noopener noreferrer">
-                🔵 LinkedIn
-              </a>
-
-              <button
-                onClick={() => {
-                  navigator.clipboard.writeText(getShareData(shareProject).text);
-                  setCopied(true);
-
-                  setTimeout(() => {
-                    setCopied(false);
-                    setShareProject(null);
-                  }, 1200);
-                }}
-              >
-                🔗 Copy Link
-              </button>
-
-            </div>
-
-            {/* COPIED MESSAGE */}
-            {copied && (
-              <div className="copy-toast">
-                Copied to clipboard ✔
-              </div>
-            )}
-
-          </div>
-        </div>
+        <ShareModal
+          project={shareProject}
+          onClose={() => setShareProject(null)}
+        />
       )}
+
     </motion.div>
   );
 }
