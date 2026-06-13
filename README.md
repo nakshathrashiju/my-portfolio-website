@@ -1,4 +1,4 @@
-# Nakshathra Shiju — Developer Portfolio
+Personal Portfolio
 
 A personal portfolio website built with React, showcasing projects, skills, and a working contact form connected to MongoDB.
 
