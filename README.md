@@ -1,10 +1,4 @@
-Here is a polished, professional, and slightly optimized version of your `README.md`.
 
-I have cleaned up the formatting, ensured consistency in the directory tree, and added a quick troubleshooting section for anyone trying to run your project locally (like reminding them to update the backend URL in local development).
-
----
-
-```markdown
 # Personal Portfolio Website
 
 A dynamic personal portfolio website built with the MERN stack (React, Node.js, Express, MongoDB) to showcase projects, technical skills, and manage contact inquiries through a live database backend.
@@ -179,6 +173,3 @@ The application will launch automatically at `http://localhost:3000`.
 * 🌐 [Live Portfolio](https://nakshathrashijuportfolio.netlify.app)
 * 💻 [GitHub Profile](https://github.com/nakshathrashiju)
 
-```
-
-```
