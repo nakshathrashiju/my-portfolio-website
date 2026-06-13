@@ -1,13 +1,13 @@
 
-# Personal Portfolio Website
+ Personal Portfolio Website
 
 A dynamic personal portfolio website built with the MERN stack (React, Node.js, Express, MongoDB) to showcase projects, technical skills, and manage contact inquiries through a live database backend.
 
 🌐 **Live Site:** [nakshathrashijuportfolio.netlify.app](https://nakshathrashijuportfolio.netlify.app)
 
----
 
-## 🚀 Features
+
+ Features
 
 * **Smooth Navigation:** Built with custom scroll targeting and active section highlighting.
 * **Fluid Animations:** Enhanced UI/UX utilizing `framer-motion` for reveal effects and floating background elements.
@@ -15,25 +15,25 @@ A dynamic personal portfolio website built with the MERN stack (React, Node.js, 
 * **Live Contact System:** Fully functional contact form connected to a backend REST API that securely saves client messages to MongoDB Atlas.
 * **Responsive Layout:** Mobile-first responsive design featuring a custom scrollbar and optimized media queries.
 
----
 
-## 🛠️ Tech Stack
 
-### Frontend
+ Tech Stack
+
+ Frontend
 * **Core:** React.js, HTML5, CSS3 (Custom variables, gradients)
 * **Libraries:** Framer Motion, React Scroll, React Icons
 * **Deployment:** Netlify
 
-### Backend
+ Backend
 * **Core:** Node.js, Express.js
 * **Database:** MongoDB Atlas (Cloud)
 * **ODM:** Mongoose
 * **Middleware:** CORS, Express JSON Parser
 * **Deployment:** Render
 
----
 
-## 📂 Project Structure
+
+ Project Structure
 
 ```text
 portfolio/
@@ -58,17 +58,17 @@ portfolio/
 
 ```
 
----
 
-## 💻 Getting Started Locally
 
-### Prerequisites
+ Getting Started Locally
+
+ Prerequisites
 
 * Node.js (v16.x or higher recommended)
 * MongoDB Atlas Cloud Account or MongoDB Community Server local instance
 * Git Installed
 
-### 1. Clone the Repository
+ 1. Clone the Repository
 
 ```bash
 git clone [https://github.com/nakshathrashiju/portfolio.git](https://github.com/nakshathrashiju/portfolio.git)
@@ -76,7 +76,7 @@ cd portfolio
 
 ```
 
-### 2. Configure and Run the Backend
+ 2. Configure and Run the Backend
 
 ```bash
 # Navigate to the backend directory
@@ -103,7 +103,7 @@ node server.js
 
 ```
 
-### 3. Configure and Run the Frontend
+ 3. Configure and Run the Frontend
 
 Open a new terminal window, navigate back to the root, then enter the frontend directory:
 
@@ -134,7 +134,7 @@ The application will launch automatically at `http://localhost:3000`.
 
 ---
 
-## 🌐 Cloud Deployment Architecture
+ Cloud Deployment Architecture
 
 | Service | Architecture Layer | Deployment Mechanism |
 | --- | --- | --- |
@@ -142,20 +142,20 @@ The application will launch automatically at `http://localhost:3000`.
 | **Render** | Node/Express API Server | Hosted Environment (Web Service) |
 | **MongoDB Atlas** | Database Layer | Cloud-Managed NoSQL Database |
 
-### Required Environment Variables
+ Required Environment Variables
 
-#### Production Backend (Render Environment)
+ Production Backend (Render Environment)
 
 * `MONGO_URI` = `your_mongodb_atlas_connection_string`
 * `FRONTEND_URL` = `https://nakshathrashijuportfolio.netlify.app`
 
-#### Production Frontend (Netlify Environment)
+ Production Frontend (Netlify Environment)
 
 * `REACT_APP_BACKEND_URL` = `https://my-portfolio-website-pa2y.onrender.com`
 
 ---
 
-## 📝 Navigation Sections
+ Navigation Sections
 
 * **Home:** Brief introduction, personal branding statement, and call-to-action quick links.
 * **About:** Background timeline and professional summary.
@@ -165,7 +165,7 @@ The application will launch automatically at `http://localhost:3000`.
 
 ---
 
-## 📬 Contact & Links
+📬 Contact & Links
 
 **Nakshathra Shiju**
 
