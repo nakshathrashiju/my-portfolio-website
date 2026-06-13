@@ -245,6 +245,7 @@ body {
 /* ===== ABOUT ===== */
 .about {
   padding: 100px 60px;
+  min-height: 100vh;
   background: #0f0f0f;
 }
 
@@ -320,6 +321,7 @@ body {
 /* ===== SKILLS ===== */
 .skills {
   padding: 100px 60px;
+  min-height: 100vh;
   background: #0a0a0a;
 }
 
@@ -376,6 +378,7 @@ body {
 /* ===== PROJECTS ===== */
 .projects {
   padding: 100px 60px;
+  min-height: 100vh;
   background: #0f0f0f;
 }
 
@@ -587,6 +590,7 @@ body {
 /* ===== CONTACT ===== */
 .contact {
   padding: 100px 60px;
+  min-height: 100vh;
   background: #0a0a0a;
 }
 

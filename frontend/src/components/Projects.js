@@ -55,18 +55,16 @@ const projects = [
 ];
 
 function ShareModal({ project, onClose }) {
-  const getShareData = (project) => {
-    const text = `🚀 ${project.title}\n\n${project.description}\n\nTech Stack: ${project.tags.join(', ')}`;
-    return {
-      text,
-      whatsapp: `https://wa.me/?text=${encodeURIComponent(text)}`,
-      email: `mailto:?subject=${encodeURIComponent(project.title)}&body=${encodeURIComponent(text)}`,
-      linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`
-    };
-  };
-
   const [copied, setCopied] = React.useState(false);
-  const shareData = getShareData(project);
+
+  const text = `🚀 ${project.title}\n\n${project.description}\n\nTech Stack: ${project.tags.join(', ')}`;
+
+  const shareData = {
+    text,
+    whatsapp: `https://wa.me/?text=${encodeURIComponent(text)}`,
+    gmail: `https://mail.google.com/mail/?view=cm&su=${encodeURIComponent(project.title)}&body=${encodeURIComponent(text)}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`
+  };
 
   const handleCopy = () => {
     navigator.clipboard.writeText(shareData.text);
@@ -92,8 +90,8 @@ function ShareModal({ project, onClose }) {
           <a href={shareData.whatsapp} target="_blank" rel="noopener noreferrer">
             🟢 WhatsApp
           </a>
-          <a href={shareData.email}>
-            📧 Email
+          <a href={shareData.gmail} target="_blank" rel="noopener noreferrer">
+            📧 Gmail
           </a>
           <a href={shareData.linkedin} target="_blank" rel="noopener noreferrer">
             🔵 LinkedIn
@@ -126,7 +124,7 @@ function Projects() {
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
-      <h2>My Projects</h2>
+      <h2 className="section-title">My Projects</h2>
 
       <div className="projects-grid">
         {projects.map((project, index) => (
@@ -137,7 +135,6 @@ function Projects() {
           >
             <div className="project-top">
               <h3 className="project-title">{project.title}</h3>
-
               <div className="project-links">
                 {project.github && (
                   <a href={project.github} target="_blank" rel="noopener noreferrer">
@@ -161,7 +158,6 @@ function Projects() {
         ))}
       </div>
 
-      {/* Modal rendered via Portal — directly into document.body */}
       {shareProject && (
         <ShareModal
           project={shareProject}

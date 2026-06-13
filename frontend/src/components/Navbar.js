@@ -16,11 +16,11 @@ function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-logo">MyPortfolio</div>
       <ul className="nav-links">
-        <li><Link to="hero" smooth={true} duration={500}>Home</Link></li>
-        <li><Link to="about" smooth={true} duration={500}>About</Link></li>
-        <li><Link to="skills" smooth={true} duration={500}>Skills</Link></li>
-        <li><Link to="projects" smooth={true} duration={500}>Projects</Link></li>
-        <li><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
+        <li><Link to="hero" smooth={true} duration={500} offset={-80}>Home</Link></li>
+        <li><Link to="about" smooth={true} duration={500} offset={-80}>About</Link></li>
+        <li><Link to="skills" smooth={true} duration={500} offset={-80}>Skills</Link></li>
+        <li><Link to="projects" smooth={true} duration={500} offset={-80}>Projects</Link></li>
+        <li><Link to="contact" smooth={true} duration={500} offset={-80}>Contact</Link></li>
       </ul>
     </nav>
   );
