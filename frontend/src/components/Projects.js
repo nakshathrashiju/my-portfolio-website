@@ -51,6 +51,12 @@ const projects = [
     description: 'A classic console-based Tic Tac Toe and Snake Game developed in C++.',
     tags: ['C++', 'Game Development'],
     github: 'https://github.com/nakshathrashiju/mini-game-project'
+  },
+  {
+    title: 'Personal Portfolio Websites',
+    description: 'A modern full-stack portfolio website built to showcase my projects, skills, and achievements. Features responsive design, smooth animations, project sharing functionality, a contact form integrated with MongoDB, and deployment using Netlify and Render.',
+    tags: ['React.js', 'Node.js', 'MongoDB', 'Full Stack', 'Portfolio'],
+    github: 'https://github.com/nakshathrashiju/my-portfolio-website'
   }
 ];
 
