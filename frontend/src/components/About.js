@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import profilePic from '../assets/user1.jpeg';
+import profilePic from 'C:\Users\hp\Downloads\user1.jpeg';
 
 function About() {
   return (
