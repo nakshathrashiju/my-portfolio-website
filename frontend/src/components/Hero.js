@@ -33,7 +33,7 @@ function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          B-Tech | CSE | Year 2
+          B-Tech | CSE | Year 3
         </motion.h2>
         <motion.p
           className="hero-description"
