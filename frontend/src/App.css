@@ -264,12 +264,12 @@ body {
   width: 100%;
   aspect-ratio: 1;
   background: linear-gradient(135deg, #667eea22, #764ba222);
-  border: 2px dashed #667eea;
+  border: 2px dashed #f7f8fb;
   border-radius: 0% ;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #667eea;
+  color: #f7f8fb;
   font-size: 14px;
   letter-spacing: 2px;
   overflow: hidden;
