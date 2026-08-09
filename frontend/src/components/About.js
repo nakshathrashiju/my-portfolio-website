@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import profilePic from 'C:\Users\hp\Downloads\user1.jpeg';
+import profilePic from '../assets/user1.jpeg';
 
 function About() {
   return (
@@ -16,11 +16,7 @@ function About() {
         <div className="about-grid">
           <div className="about-image">
             <div className="image-placeholder">
-              <img
-  src={profilePic}
-  alt="Nakshathra Shiju"
-  className="about-image"
-/>
+              <img src={profilePic} alt="Nakshathra Shiju" />
             </div>
           </div>
           <div className="about-text">
