@@ -260,7 +260,6 @@ body {
   gap: 60px;
   align-items: center;
 }
-
 .image-placeholder {
   width: 100%;
   aspect-ratio: 1;
@@ -273,12 +272,18 @@ body {
   color: #667eea;
   font-size: 14px;
   letter-spacing: 2px;
+  overflow: hidden;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-image {
   width: 280px;
   height: 280px;
-  object-fit: cover;
   border-radius: 0%;
   border: 4px solid #667eea;
   box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
