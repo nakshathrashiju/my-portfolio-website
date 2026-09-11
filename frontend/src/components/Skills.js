@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const skills = [
 'C',
 'Java',
-'C++'
+'C++',
 'Python',
 'Object-Oriented Programming',
 'Data Structures & Algorithms',
