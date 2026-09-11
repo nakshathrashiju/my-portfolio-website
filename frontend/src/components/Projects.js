@@ -57,6 +57,12 @@ const projects = [
     description: 'A modern full-stack portfolio website built to showcase my projects, skills, and achievements. Features responsive design, smooth animations, project sharing functionality, a contact form integrated with MongoDB, and deployment using Netlify and Render.',
     tags: ['React.js', 'Node.js', 'MongoDB', 'Full Stack', 'Portfolio'],
     github: 'https://github.com/nakshathrashiju/my-portfolio-website'
+  },
+  {
+    title: 'Electronic Voting Machine Using STM32',
+    description: 'An STM32-based electronic voting system with push-button voting, LCD display, LED and buzzer feedback, automatic vote counting, winner and tie detection.',
+    tags: ['STM32', 'Embedded Systems', 'C/C++', 'I2C', 'Wokwi'],
+    github: 'https://github.com/nakshathrashiju/stm32-electronic-voting-machine'
   }
 ];
 

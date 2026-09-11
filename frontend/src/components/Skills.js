@@ -2,13 +2,20 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const skills = [
-'C++',
+'C',
 'Java',
+'C++'
 'Python',
 'Object-Oriented Programming',
 'Data Structures & Algorithms',
 'MySQL',
 'MongoDB',
+'STM32',
+'Embedded Systems',
+'GPIO',
+'I2C',
+'Wokwi',
+'Hardware Interfacing',
 'Database Management Systems',
 'HTML',
 'CSS',
