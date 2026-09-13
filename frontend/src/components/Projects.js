@@ -8,7 +8,7 @@ const projects = [
     title: 'Pharmacy Management System',
     description: 'A Java-based application for managing pharmacy operations, medicine records, inventory, and customer information.',
     tags: ['Java', 'OOP', 'Management System'],
-    github: null
+    github: 'https://github.com/nakshathrashiju/elite-pharmacy-management-system'
   },
   {
     title: 'Student Management System',
