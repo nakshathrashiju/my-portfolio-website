@@ -38,7 +38,7 @@ const projects = [
     title: 'StudySync',
     description: 'An interactive study management system prototype designed using Figma.',
     tags: ['Figma', 'UI/UX', 'Prototype'],
-    github: null
+    github: 'https://github.com/nakshathrashiju/studysync'
   },
   {
     title: 'BalanceBite',
