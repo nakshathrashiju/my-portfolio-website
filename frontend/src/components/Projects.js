@@ -63,6 +63,12 @@ const projects = [
     description: 'An STM32-based electronic voting system with push-button voting, LCD display, LED and buzzer feedback, automatic vote counting, winner and tie detection.',
     tags: ['STM32', 'Embedded Systems', 'C/C++', 'I2C', 'Wokwi'],
     github: 'https://github.com/nakshathrashiju/stm32-electronic-voting-machine'
+  },
+  {
+    title: 'Café Lumière',
+    description: 'A modern café website design created with a clean and elegant user interface.',
+    tags: ['Figma', 'UI/UX', 'Web Design'],
+    github: 'https://github.com/nakshathrashiju/cafe-lumiere'
   }
 ];
 
